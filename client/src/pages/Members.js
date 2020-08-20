@@ -3,11 +3,11 @@ import { useStoreContext } from '../utils/GlobalStore';
 
 function Members(){
     const [state] = useStoreContext();
-    const {email} = state;
+    const {nickname} = state;
     return <div className="container">
     <div className="row">
       <div className="col-md-6 col-md-offset-3">
-        <h2>Welcome {email}</h2>
+        <h2>Welcome {nickname}</h2>
       </div>
     </div>
   </div>

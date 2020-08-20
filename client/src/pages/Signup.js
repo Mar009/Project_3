@@ -10,20 +10,22 @@ function Signup() {
 
     const emailRef = useRef();
     const passwordRef = useRef();
+    const nicknameRef = useRef();
     const [, dispatch] = useStoreContext();
 
     const handleSignup = (event) => {
         event.preventDefault();
         const signupData = {
             email: emailRef.current.value,
-            password: passwordRef.current.value
+            password: passwordRef.current.value,
+            nickname: nicknameRef.current.value
         };
         API.signup(signupData).then(response => {
-            const { email } = response.data;
+            const { nickname } = response.data;
             dispatch({
                 type: AUTH_SET_LOGGED_IN,
                 data: {
-                    email
+                    nickname
                 }
             });
         }).catch(err => {
@@ -38,6 +40,10 @@ function Signup() {
                 <div className="col-md-6 col-md-offset-3">
                     <h2>Sign Up Form</h2>
                     <form className="signup" onSubmit={handleSignup}>
+                    <div className="form-group">
+                            <label htmlFor="exampleInputNickname">Nickname</label>
+                            <input type="nickname" className="form-control" placeholder="Nickname" ref={nicknameRef} />
+                        </div>
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Email address</label>
                             <input type="email" className="form-control" placeholder="Email" ref={emailRef} />
