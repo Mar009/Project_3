@@ -18,11 +18,11 @@ function App() {
     useEffect(() => {
         // Try getting our user-data, if the user is logged in, we will update our GlobalStore to refelct that
         API.checkUserInfo().then(response => {
-            const { email } = response.data;
+            const { nickname } = response.data;
             dispatch({
                 type: AUTH_SET_LOGGED_IN,
                 data: {
-                    email
+                    nickname
                 }
             })
         }).catch(err => {
@@ -57,7 +57,7 @@ function App() {
                         ) : (
                             // If the user is Logged In
                             <>
-                                <b>Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
+                                <b>Welcome {state.nickname}!</b> &nbsp;&nbsp;&nbsp;
                                 <Link to="/members">Members</Link> | <a onClick={() => logout() }href="#">Logout</a>
                             </>
                         )
