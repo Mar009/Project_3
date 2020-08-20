@@ -13,5 +13,10 @@ export default {
     },
     logout: () => {
         return axios.get("/logout");
+    },
+
+    checkSymptoms: () => {
+        return axios.get("https://api.nutridigm.com/api/v1/nutridigm/healthconditions?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0&api_key=200a4593b9277ce9ffb162e74cb71ea0");
     }
+
 }
