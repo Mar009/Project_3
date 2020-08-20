@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import API from "../utils/API";
 import { AUTH_SET_LOGGED_IN } from "../utils/actions";
 import { useStoreContext } from '../utils/GlobalStore';
+import { Box } from "rebass";
 
 function Signup() {
     const [showError, setShowError] = useState(false);
@@ -33,6 +34,15 @@ function Signup() {
     }
 
     return <div>
+        <Box
+        sx = {{
+            p: 4,
+            color: 'tomato',
+            bg: '#eee',
+            fontFamily: 'body',
+            fontWeight: 'body',
+            lineHeight: 'body',
+        }}>
         <div className="container">
             <div className="row">
                 <div className="col-md-6 col-md-offset-3">
@@ -57,6 +67,7 @@ function Signup() {
                 </div>
             </div>
         </div>
+        </Box>
     </div>
 }
 
