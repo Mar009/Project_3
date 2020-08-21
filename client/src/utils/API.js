@@ -16,14 +16,7 @@ export default {
     },
 
     checkSymptoms: () => {
-        return axios.get("/api/new-symptom");}
-    // },
-    // storeFoodGroups: () => {
-    //     return axios.get("https://api.nutridigm.com/api/v1/nutridigm/foodgroups?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0");
-    // },
-
-    // getRemedies: () => {
-    //     return axios.get("https://api.nutridigm.com/api/v1/nutridigm/suggest?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0&problemId="+problemID+"&fg2="+fgID);
-    // }
+        return axios.get("https://api.nutridigm.com/api/v1/nutridigm/healthconditions?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0&api_key=200a4593b9277ce9ffb162e74cb71ea0");
+    }
 
 }
