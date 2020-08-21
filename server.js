@@ -5,6 +5,9 @@ const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 
+// following online instructions to deploy this cursed thing
+const publicPath = path.join(__dirname, '..','client', 'public');
+
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 3001;
 const db = require("./models");
@@ -13,7 +16,8 @@ const db = require("./models");
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+//Still following along
+app.use(express.static(publicPath));
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({
@@ -25,9 +29,14 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+//Heroku is yelling that method Get path is not a thing 
 app.get('/',(req,res) =>{
-  res.sendFile(path.join("public", "index.html"));
+  res.sendFile(path.join(publicPath, "index.html"));
 })
+
+// app.get('/favicon.ico', (req,res) => {
+//   res.sendFile(path.join(publicPath, ""))
+// })
 
 // Requiring our routes
 require("./routes/api-routes.js")(app);
