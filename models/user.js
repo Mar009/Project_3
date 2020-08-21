@@ -18,9 +18,9 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     //Added nickname Trait to User
-    nickName: {
+    nickname: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true,
       validate: {
         len:[1]
@@ -40,5 +40,12 @@ module.exports = function(sequelize, DataTypes) {
       null
     );
   });
+
+  User.associate = models => {
+    User.hasMany(models.Symptom,{
+      onDelete: "cascade"
+    });
+  };
+
   return User;
 };
