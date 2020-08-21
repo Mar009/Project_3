@@ -7,6 +7,7 @@ import Members from "./pages/Members";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
+import addNew from "./populateSymptoms";
 
 
 function App() {
@@ -19,10 +20,12 @@ function App() {
         // Try getting our user-data, if the user is logged in, we will update our GlobalStore to refelct that
         API.checkUserInfo().then(response => {
             const { nickname, email } = response.data;
+            console.log(response.data);
             dispatch({
                 type: AUTH_SET_LOGGED_IN,
                 data: {
-                    nickname, email
+                    nickname,
+                    email
                 }
             })
         }).catch(err => {
@@ -57,9 +60,10 @@ function App() {
                         ) : (
                             // If the user is Logged In
                             <>
-                                <b>Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
-                                <Link to="/members">Members</Link> | <a onClick={() => logout() }href="#">Logout</a>
+                                <b>Welcome {state.nickname}!</b> &nbsp;&nbsp;&nbsp;
+                                <Link to="/members">Members</Link> | <a onClick={() => logout() }href="#">Logout</a> | <Link to="/new-symptom">New Symptom</Link>
                             </>
+                            
                         )
                         }
                 </div>
@@ -80,6 +84,7 @@ function App() {
                                     <Redirect to="/members" />
                                 </Route>
                                 <Route exact path="/members" component={Members} />
+                                <Route exact path="/new-symptom" component={addNew} />
                             </>
                             )
                     }

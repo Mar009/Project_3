@@ -1,5 +1,5 @@
 import React, { createContext, useReducer, useContext } from "react";
-import { AUTH_SET_LOGGED_OUT, AUTH_SET_LOGGED_IN } from "./actions";
+import { AUTH_SET_LOGGED_OUT, AUTH_SET_LOGGED_IN, SET_SYMPTOMS} from "./actions";
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
@@ -20,8 +20,13 @@ const reducer = (state, action) => {
                 ...state,
                 userLoggedIn: false,
                 email: "",
-                nickname: ""
+                nickname:""
             }
+            case SET_SYMPTOMS:
+                return {
+                   ...state,
+                   symptoms: action.data.symptomLibrary
+                }
         default:
             return state;
     }
@@ -33,7 +38,8 @@ const StoreProvider = ({value, ...props}) => {
     const initialState = value || {
         userLoggedIn: false,
         email: "",
-        nickname: ""
+        nickname: "",
+        symptoms: []
     };
     const [state, dispatch] = useReducer(reducer, initialState)
     window.dispatch = dispatch;
