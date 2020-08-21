@@ -22,11 +22,11 @@ function Signup() {
             nickname: nicknameRef.current.value
         };
         API.signup(signupData).then(response => {
-            const { nickname } = response.data;
+            const { nickname, email } = response.data;
             dispatch({
                 type: AUTH_SET_LOGGED_IN,
                 data: {
-                    nickname
+                    nickname, email
                 }
             });
         }).catch(err => {

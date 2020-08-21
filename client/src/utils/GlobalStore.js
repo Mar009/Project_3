@@ -12,13 +12,15 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 userLoggedIn: true,
-                email: action.data.email
+                email: action.data.email,
+                nickname: action.data.nickname
             }
         case AUTH_SET_LOGGED_OUT:
             return {
                 ...state,
                 userLoggedIn: false,
-                email: ""
+                email: "",
+                nickname: ""
             }
         default:
             return state;
@@ -30,7 +32,8 @@ const StoreProvider = ({value, ...props}) => {
     // What the react app view model starts as
     const initialState = value || {
         userLoggedIn: false,
-        email: ""
+        email: "",
+        nickname: ""
     };
     const [state, dispatch] = useReducer(reducer, initialState)
     window.dispatch = dispatch;
