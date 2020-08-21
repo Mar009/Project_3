@@ -25,6 +25,10 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.get('*',(req,res) =>{
+  res.sendFile(path.join("public", "index.html"));
+})
+
 // Requiring our routes
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
