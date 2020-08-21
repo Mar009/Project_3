@@ -6,11 +6,11 @@ function HomePgBtn(props) {
         <div>
         <Button
         sx={{
-          backgroundColor: "blue",
+          backgroundColor: "#bee3db",
           p: 30,
           px: 100,
           ':hover': {
-            backgroundColor: 'tomato',
+            backgroundColor: '#ffd6ba',
           }
       }}>{props.name}</Button>
       <br />
