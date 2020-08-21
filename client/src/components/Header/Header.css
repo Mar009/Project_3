@@ -1,0 +1,44 @@
+@media only screen and (min-width: 415px) {
+
+    #headerWrapper {
+        background-color: rgb(215, 212, 196);
+        
+        height: 150px;
+    }
+
+    #headerFont {
+        position: relative;
+        top: -45px;
+        font-family: 'Codystar', cursive;
+        font-weight: bold;
+    }
+
+    #headerPFont {
+        position: relative;
+        top: -45px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+}
+
+@media only screen and (max-width: 414px) {
+    #headerWrapper {
+        background-color: rgb(201, 201, 201);
+        height: 150px;
+    }
+
+    #headerFont {
+        position: relative;
+        top: -10px;
+        font-family: 'Codystar', cursive;
+        font-weight: bold;
+        font-size: 12vw;
+    }
+
+    #headerPFont {
+        position: relative;
+        top: -10px;
+        font-size: 3.5vw;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}

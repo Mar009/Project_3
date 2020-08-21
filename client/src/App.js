@@ -4,6 +4,15 @@ import './App.css';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Members from "./pages/Members";
+import Home  from "./pages/Home";
+import New from "./pages/New";
+import Remedy from "./pages/Remedy";
+import History from "./pages/History";
+import Navbar from "./components/Navbar/Navbar";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Wrapper from "./components/Wrapper/Wrapper";
+
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
