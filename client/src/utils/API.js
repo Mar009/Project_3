@@ -15,15 +15,15 @@ export default {
         return axios.get("/logout");
     },
 
-    checkSymptoms: () => {
-        return axios.get("/api/new-symptom");}
-    // },
-    // storeFoodGroups: () => {
-    //     return axios.get("https://api.nutridigm.com/api/v1/nutridigm/foodgroups?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0");
-    // },
+    getSymptoms: () => {
+        return axios.get("/api/new-symptom");
+   },
+    getFoodGroups: () => {
+        return axios.get("/api/food-groups");
+    },
 
     // getRemedies: () => {
-    //     return axios.get("https://api.nutridigm.com/api/v1/nutridigm/suggest?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0&problemId="+problemID+"&fg2="+fgID);
+    //     return axios.get("/api/get-remedy");
     // }
 
 }

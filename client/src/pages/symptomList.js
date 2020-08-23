@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import API from "./utils/API";
-import { useStoreContext } from "./utils/GlobalStore";
-import { SET_SYMPTOMS } from "./utils/actions";
+import API from "../utils/API";
+import { useStoreContext } from "../utils/GlobalStore";
+import { SET_SYMPTOMS } from "../utils/actions";
 
 function Populate() {
 const [state, dispatch] = useStoreContext();
 useEffect(() => {
-    API.checkSymptoms().then((response => {
+    API.getSymptoms().then((response => {
         console.log(response.data)
         dispatch({
             type: SET_SYMPTOMS,
@@ -23,7 +23,7 @@ return (
 <ul>
  { 
  state.symptoms.map(symptom => {
-     return<li>{symptom.hcText}</li>
+     return<li key={symptom.problemID}>{symptom.hcText}</li>
  }
     )  
     }

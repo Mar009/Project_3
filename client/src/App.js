@@ -7,7 +7,8 @@ import Members from "./pages/Members";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
-import addNew from "./populateSymptoms";
+import symptomList from "./pages/symptomList";
+import getRemedy from "./pages/remedyList"
 
 
 function App() {
@@ -61,7 +62,7 @@ function App() {
                             // If the user is Logged In
                             <>
                                 <b>Welcome {state.nickname}!</b> &nbsp;&nbsp;&nbsp;
-                                <Link to="/members">Members</Link> | <a onClick={() => logout() }href="#">Logout</a> | <Link to="/new-symptom">New Symptom</Link>
+                                <Link to="/members">Members</Link> | <a onClick={() => logout() }href="#">Logout</a> | <Link to="/new-symptom">New Symptom</Link> | <Link to="/get-remedy">Get Remedy</Link>
                             </>
                             
                         )
@@ -84,8 +85,10 @@ function App() {
                                     <Redirect to="/members" />
                                 </Route>
                                 <Route exact path="/members" component={Members} />
-                                <Route exact path="/new-symptom" component={addNew} />
+                                <Route exact path="/new-symptom" component={symptomList} />
+                                <Route exact path="/get-remedy" component={getRemedy} />
                             </>
+                              
                             )
                     }
                     {
