@@ -64,9 +64,10 @@ module.exports = function(app) {
   })
 
   app.get("/api/symptom_data", function(req, res) {
-      res.json({
-        name: req.symptom.name,
-        date: req.symptom.createdAt
-      });
+      db.Symptom.findAll({
+        name: req.params.name,
+        date: req.params.createdAt
+      })
+      .then(result => res.json(result));
   })
 }
