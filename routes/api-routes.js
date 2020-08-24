@@ -45,4 +45,19 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.post("/api/symptom_data", function(req, res) {
+    db.Symptom.create({
+      name: req.body.name,
+      locale: req.body.locale,
+      UserId: req.body.UserId,
+      time: 3
+    })
+      .then(function() {
+        res.status(200).send('success!');
+      })
+      .catch(function(err) {
+        res.status(401).json(err);
+      });
+  })
 };

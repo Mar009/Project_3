@@ -1,6 +1,6 @@
 import React from "react";
 import { Heading } from "rebass";
-import Table from "..components/HistoryLog"
+import Table from "../components/HistoryLog"
 
 function TablePage() {
     return (
