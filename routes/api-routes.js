@@ -51,7 +51,9 @@ module.exports = function(app) {
       name: req.body.name,
       locale: req.body.locale,
       UserId: req.body.UserId,
-      time: 3
+      time: req.body.time,
+      id: req.body.id
+      
     })
       .then(function() {
         res.status(200).send('success!');
@@ -60,4 +62,11 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   })
-};
+
+  app.get("/api/symptom_data", function(req, res) {
+      res.json({
+        name: req.symptom.name,
+        date: req.symptom.createdAt
+      });
+  })
+}
