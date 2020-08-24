@@ -7,9 +7,12 @@ import Members from "./pages/Members";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
+import NewSymptomPg from "./pages/NewSymptomPg";
+import HistoryPg from "./pages/HistoryPg";
 
 
 function App() {
+
     // Our provider is setup in index.js so we can use the GlobalStore here easily.
 
     // Something we want to do at the beginning of the application is check if the user is logged in or not, if the user is, we'll
@@ -18,11 +21,11 @@ function App() {
     useEffect(() => {
         // Try getting our user-data, if the user is logged in, we will update our GlobalStore to refelct that
         API.checkUserInfo().then(response => {
-            const { nickname } = response.data;
+            const { nickname, email } = response.data;
             dispatch({
                 type: AUTH_SET_LOGGED_IN,
                 data: {
-                    nickname
+                    nickname, email
                 }
             })
         }).catch(err => {
@@ -57,7 +60,7 @@ function App() {
                         ) : (
                             // If the user is Logged In
                             <>
-                                <b>Welcome {state.nickname}!</b> &nbsp;&nbsp;&nbsp;
+                                <b>Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
                                 <Link to="/members">Members</Link> | <a onClick={() => logout() }href="#">Logout</a>
                             </>
                         )
@@ -80,6 +83,9 @@ function App() {
                                     <Redirect to="/members" />
                                 </Route>
                                 <Route exact path="/members" component={Members} />
+                                <Route exact path="/symptoms" component={NewSymptomPg} />
+                                <Route exact path="/history" component={HistoryPg} />
+
                             </>
                             )
                     }
