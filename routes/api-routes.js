@@ -45,4 +45,29 @@ module.exports = function(app) {
       });
     }
   });
-};
+
+  app.post("/api/symptom_data", function(req, res) {
+    db.Symptom.create({
+      name: req.body.name,
+      locale: req.body.locale,
+      UserId: req.body.UserId,
+      time: req.body.time,
+      id: req.body.id
+      
+    })
+      .then(function() {
+        res.status(200).send('success!');
+      })
+      .catch(function(err) {
+        res.status(401).json(err);
+      });
+  })
+
+  app.get("/api/symptom_data", function(req, res) {
+      db.Symptom.findAll({
+        name: req.params.name,
+        date: req.params.createdAt
+      })
+      .then(result => res.json(result));
+  })
+}
