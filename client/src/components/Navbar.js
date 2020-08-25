@@ -43,19 +43,20 @@ function Navbar() {
         <div>
         <Box
         sx={{
-            backgroundColor: "#ccc"
+            backgroundColor: "#ccc",
+            border: "1px solid black"
         }}>
         <div>
             {!state.userLoggedIn ? (
                 // if the user is Logged out
                     <>
-                        <b>Welcome Guest!</b> &nbsp;&nbsp;&nbsp;
+                        <b>&nbsp;&nbsp;Welcome Guest!</b> &nbsp;&nbsp;&nbsp;
                         <Link to="/login">Login</Link> | <Link to="/signup">Signup</Link>
                     </>
                 ) : (
                 // If the user is Logged In
                     <>
-                        <b>Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
+                        <b>&nbsp;&nbsp;Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
                         <Link to="/members">Home</Link> | <Link to="/symptoms">New Symptom</Link> | <Link to="/history">Your History</Link> | <a onClick={() => logout() }href="#">Logout</a> |
                         </>
                     )

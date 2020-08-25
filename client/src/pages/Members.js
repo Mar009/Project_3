@@ -1,7 +1,9 @@
 import React from "react"
 import { useStoreContext } from '../utils/GlobalStore';
 import { Box, Heading } from "rebass";
-import HomePgBtn from "../components/HomePgBtn"
+import HomePgBtn from "../components/HomePgBtn";
+import "../components/home.css";
+
 
 
 function Members(){
@@ -14,7 +16,7 @@ function Members(){
       sx={{
         p: 4,
         color: 'black',
-        bg: '#89b0ae',
+        bg: '#98c1d9',
         fontFamily: 'body',
         fontWeight: 'body',
         lineHeight: 'body',
@@ -22,15 +24,16 @@ function Members(){
         my: 70,
         height: 400,
         // width: 400,
-        borderRadius: 40
+        borderRadius: 40,
+        border: "1px solid black"
       }}>
       <Heading
         sx={{
           textAlign: "center",
-          color: "whitesmoke",
+          color: "#233d4d",
           fontSize: 32
         }}>
-        WELCOME, {nickname}!
+        <b>WELCOME, {nickname}!</b>
       </Heading>
       <Box
         sx={{
