@@ -30,10 +30,8 @@ export default function Members(){
           <Footer />
         </Router>
       </>
-    
-  
 
-      <div>
+ <div>
     <Box
       sx={{
         p: 4,
