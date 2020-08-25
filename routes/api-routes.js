@@ -46,44 +46,6 @@ module.exports = function(app) {
     }
   });
 
-
-  //this function loads the list of new symptoms
-  app.get("/api/new-symptom", function(req,res){
-    if (!req.user) {
-      // The user is not logged in, send back an empty object
-      res.status(401).json({});
-    } else {
-      axios.get("https://api.nutridigm.com/api/v1/nutridigm/healthconditions?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0&api_key=200a4593b9277ce9ffb162e74cb71ea0").then(response => {
-        res.json(response.data)
-      })
-    }
-  });
-  //this function will give the user a list of remedy types
-  app.get("/api/food-groups", function(req,res){
-    if (!req.user) {
-      // The user is not logged in, send back an empty object
-      res.status(401).json({});
-    } else {
-      axios.get("https://api.nutridigm.com/api/v1/nutridigm/foodgroups?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0").then(response => {
-        res.json(response.data)
-      })
-    }
-  });
-  
-  //this will allow a user to match a symptom to a remedy type
-  // app.get("/api/get-remedy", function(req,res){
-  //   if (!req.user) {
-  //     // The user is not logged in, send back an empty object
-  //     res.status(401).json({});
-  //   } else {
-  //     axios.get("https://api.nutridigm.com/api/v1/nutridigm/suggest?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0&problemId="+problemID+"&fg2="+fgID).then(response => {
-  //       res.json(response.data)
-  //     })
-  //   }
-  // })
-  
-};
-
   app.post("/api/symptom_data", function(req, res) {
     db.Symptom.create({
       name: req.body.name,
@@ -109,4 +71,3 @@ module.exports = function(app) {
       .then(result => res.json(result));
   })
 }
-
