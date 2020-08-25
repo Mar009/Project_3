@@ -15,7 +15,9 @@ function Navbar() {
     useEffect(() => {
         // Try getting our user-data, if the user is logged in, we will update our GlobalStore to refelct that
         API.checkUserInfo().then(response => {
+            console.log(response.data)
             const { nickname, email } = response.data;
+            
             dispatch({
                 type: AUTH_SET_LOGGED_IN,
                 data: {
@@ -56,7 +58,7 @@ function Navbar() {
                 ) : (
                 // If the user is Logged In
                     <>
-                        <b>&nbsp;&nbsp;Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
+                        <b>&nbsp;&nbsp;{state.email}</b> &nbsp;&nbsp;&nbsp;
                         <Link to="/members">Home</Link> | <Link to="/symptoms">Search</Link> | <Link to="/history">History</Link> | <a onClick={() => logout() }href="#">Logout</a> |
                         </>
                     )
