@@ -4,12 +4,14 @@ import Navbar from "../components/Navbar/Navbar";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Wrapper from "../components/Wrapper/Wrapper";
+import { Box, Heading } from "rebass";
+import HomePgBtn from "../components/HomePgBtn"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MembersHome from "./MembersHome";
 import MembersNew from "./MembersNew";
 import MembersRemedy from "./MembersRemedy";
 // import MembersHistory from "./MembersHistory";
-function Members(){
+export default function Members(){
     const [state] = useStoreContext();
     const {nickname} = state;
     return (
@@ -28,8 +30,8 @@ function Members(){
           <Footer />
         </Router>
       </>
-    );
-  }
+    
+  
 
   {/* <div className="container">
   <div className="row">
@@ -40,14 +42,13 @@ function Members(){
 </div> */}
 
 
-import { Box, Heading } from "rebass";
-import HomePgBtn from "../components/HomePgBtn"
 
 
 
 
 
-    return (
+
+
       <div>
     <Box
       sx={{
@@ -88,4 +89,3 @@ import HomePgBtn from "../components/HomePgBtn"
   )
 }
 
-export default Members;
