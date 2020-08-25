@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Text } from "rebass";
+import { Flex, Box, Text, Button } from "rebass";
 
 function Table(props) {
     return (
@@ -13,8 +13,13 @@ function Table(props) {
         <Box width={2/6}> 
         <Text fontSize={[ 3, 4, 2 ]} lineHeight={2} p={2} color='#999' bg='#eee'> {props.dateLogged} </Text> 
         </Box> 
-        <Box width={4/6}> 
+        <Box width={3/6}> 
         <Text fontSize={[ 3, 4, 2 ]} lineHeight={2} p={2} color='#333' bg='#f9f9f9'> {props.symptom} </Text> 
+        </Box>
+        <Box width={1/6}>
+            <Button sx={{
+            backgroundColor: "blue"
+        }}>Find Remedy!</Button>
         </Box> 
         </Flex>
         </Box>
