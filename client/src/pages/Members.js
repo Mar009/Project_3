@@ -14,7 +14,7 @@ function Members(){
       sx={{
         p: 4,
         color: 'black',
-        bg: '#eee',
+        bg: '#89b0ae',
         fontFamily: 'body',
         fontWeight: 'body',
         lineHeight: 'body',
@@ -27,6 +27,8 @@ function Members(){
       <Heading
         sx={{
           textAlign: "center",
+          color: "whitesmoke",
+          fontSize: 32
         }}>
         WELCOME, {nickname}!
       </Heading>
