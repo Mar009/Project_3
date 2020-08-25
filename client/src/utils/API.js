@@ -26,4 +26,5 @@ export default {
     //     return axios.get("/api/get-remedy");
     // }
 
+
 }
