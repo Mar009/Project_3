@@ -9,7 +9,7 @@ import MembersHome from "./MembersHome";
 import MembersNew from "./MembersNew";
 import MembersRemedy from "./MembersRemedy";
 // import MembersHistory from "./MembersHistory";
-function Members(){
+function MembersNav(){
     const [state] = useStoreContext();
     const {nickname} = state;
     return (
@@ -38,7 +38,7 @@ function Members(){
     </div>
   </div>
 </div> */}
-export default Members;
+export default MembersNav;
 
 import { Box, Heading } from "rebass";
 import HomePgBtn from "../components/HomePgBtn"
