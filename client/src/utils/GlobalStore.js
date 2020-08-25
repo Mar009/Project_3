@@ -13,7 +13,7 @@ const reducer = (state, action) => {
                 ...state,
                 userLoggedIn: true,
                 email: action.data.email,
-                nickname: action.data.nickname
+                nickname: action.data.nickname,
             }
         case AUTH_SET_LOGGED_OUT:
             return {
@@ -33,7 +33,7 @@ const StoreProvider = ({value, ...props}) => {
     const initialState = value || {
         userLoggedIn: false,
         email: "",
-        nickname: ""
+        // nickname: ""
     };
     const [state, dispatch] = useReducer(reducer, initialState)
     window.dispatch = dispatch;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "rebass";
 import { Link } from "react-router-dom";
+import "./home.css"
 
 function HomePgBtn(props) {
     return (
@@ -8,11 +9,13 @@ function HomePgBtn(props) {
         <Link to={props.link}>
         <Button
         sx={{
-          backgroundColor: "blue",
+          backgroundColor: "#fec89a",
           p: 30,
           px: 100,
+          border: "1px solid white",
           ':hover': {
-            backgroundColor: 'tomato',
+            backgroundColor: '#ffd6ba',
+            border: "1px solid black"
           }
       }}>{props.name}</Button>
         </Link>
