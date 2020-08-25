@@ -5,10 +5,10 @@ import SymptomQ from "../components/SymptomQ";
 
 function NewSymptomPg() {
     //const [nameOfSymptom, setNameOfSymptom] = useState("");
-    const dataToSend = {name: "soreness",
-    locale: "throat",
+    const dataToSend = {name: "pain",
+    locale: "knee",
     UserId: 2,
-    id: 4, time: 3}
+    id: 1, time: 3}
 
     const postData = async (e) => {
         console.log("testing")

@@ -57,7 +57,7 @@ function Navbar() {
                 // If the user is Logged In
                     <>
                         <b>&nbsp;&nbsp;Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
-                        <Link to="/members">Home</Link> | <Link to="/symptoms">New Symptom</Link> | <Link to="/history">Your History</Link> | <a onClick={() => logout() }href="#">Logout</a> |
+                        <Link to="/members">Home</Link> | <Link to="/symptoms">Search</Link> | <Link to="/history">History</Link> | <a onClick={() => logout() }href="#">Logout</a> |
                         </>
                     )
                 }
