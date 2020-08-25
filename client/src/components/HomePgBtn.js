@@ -12,10 +12,10 @@ function HomePgBtn(props) {
           backgroundColor: "#fec89a",
           p: 30,
           px: 100,
-          border: "1px solid white",
+          border: "1px solid whitesmoke",
           ':hover': {
             backgroundColor: '#ffd6ba',
-            border: "1px solid black"
+            border: "1px solid #335c67"
           }
       }}>{props.name}</Button>
         </Link>

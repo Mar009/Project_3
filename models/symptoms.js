@@ -19,6 +19,7 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
+
     Symptom.associate = function(models) {
         Symptom.belongsTo(models.User,{
             foreignKey: {

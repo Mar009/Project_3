@@ -8,7 +8,7 @@ import "../components/home.css";
 
 function Members(){
     const [state] = useStoreContext();
-    const { nickname } = state;
+    const { nickname, email } = state;
 
     return (
       <div>
@@ -25,7 +25,7 @@ function Members(){
         height: 400,
         // width: 400,
         borderRadius: 40,
-        border: "1px solid black"
+        border: "1px solid #335c67"
       }}>
       <Heading
         sx={{
