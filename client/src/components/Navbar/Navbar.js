@@ -23,10 +23,10 @@ function Navbar() {
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item">
               <Link
-                to="/"
+                to="/members"
                 className={
                   // window.location.pathname === "/" ||
-                  window.location.pathname === "/home"
+                  window.location.pathname === "/members"
                     ? "nav-link active"
                     : "nav-link"
                 }
@@ -36,9 +36,9 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/new"
+                to="/members/new"
                 className={
-                  window.location.pathname === "/new"
+                  window.location.pathname === "/members/new"
                     ? "nav-link active"
                     : "nav-link"
                 }
@@ -48,9 +48,9 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/remedy"
+                to="/members/remedy"
                 className={
-                  window.location.pathname === "/remedy"
+                  window.location.pathname === "/members/remedy"
                     ? "nav-link active"
                     : "nav-link"
                 }
@@ -60,9 +60,9 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/history"
+                to="/members/history"
                 className={
-                  window.location.pathname === "/history"
+                  window.location.pathname === "/members/history"
                     ? "nav-link active"
                     : "nav-link"
                 }

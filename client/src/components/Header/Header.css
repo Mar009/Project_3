@@ -2,15 +2,15 @@
 
     #headerWrapper {
         background-color: rgb(215, 212, 196);
-        
         height: 150px;
     }
 
     #headerFont {
         position: relative;
-        top: -45px;
+        top: -35px;
         font-family: 'Codystar', cursive;
         font-weight: bold;
+        text-align: center;
     }
 
     #headerPFont {
@@ -33,6 +33,7 @@
         font-family: 'Codystar', cursive;
         font-weight: bold;
         font-size: 12vw;
+        text-align: center;
     }
 
     #headerPFont {
