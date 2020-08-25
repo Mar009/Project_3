@@ -70,6 +70,10 @@ module.exports = function(app) {
     }
   });
   
+
+  //problemID is imported from db tied to user symptom history
+  //fgID is chosen from the list
+
   //this will allow a user to match a symptom to a remedy type
   // app.get("/api/get-remedy", function(req,res){
   //   if (!req.user) {

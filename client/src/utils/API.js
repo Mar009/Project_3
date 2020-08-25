@@ -23,7 +23,7 @@ export default {
     },
 
     // getRemedies: () => {
-    //     return axios.get("/api/get-remedy");
+    //     return axios.get("/api/get-remedy?for+");
     // }
 
 }

@@ -1,6 +1,9 @@
 import React from "react"
 import { useStoreContext } from '../utils/GlobalStore';
 
+//need to add buttons for routes here
+//what would you like to do? (add new symptom/view history)
+
 function Members(){
     const [state] = useStoreContext();
     const {nickname} = state;

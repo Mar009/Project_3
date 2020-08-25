@@ -20,6 +20,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
     "axios": "^0.20.0",
     "bcryptjs": "2.4.3",
     "dotenv": "^8.2.0",
@@ -28,6 +29,7 @@
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "react-multi-select-component": "^3.0.1",
     "sequelize": "^5.8.6"
   },
   "devDependencies": {
