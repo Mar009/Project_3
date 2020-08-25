@@ -33,7 +33,7 @@ function Members(){
           color: "#233d4d",
           fontSize: 32
         }}>
-        <b>WELCOME, {nickname}!</b>
+        <b>WELCOME,&nbsp;{nickname}!</b>
       </Heading>
       <Box
         sx={{

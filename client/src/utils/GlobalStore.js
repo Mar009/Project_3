@@ -33,7 +33,7 @@ const StoreProvider = ({value, ...props}) => {
     const initialState = value || {
         userLoggedIn: false,
         email: "",
-        // nickname: ""
+        nickname: ""
     };
     const [state, dispatch] = useReducer(reducer, initialState)
     window.dispatch = dispatch;
