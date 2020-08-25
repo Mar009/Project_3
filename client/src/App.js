@@ -7,8 +7,8 @@ import Members from "./pages/Members";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
-import symptomList from "./pages/symptomList";
-import getRemedy from "./pages/remedyList"
+import symptomList from "./components/symptomList";
+import getRemedy from "./components/remedyList";
 
 
 function App() {
