@@ -39,7 +39,7 @@ function Members(){
   </div>
 </div> */}
 export default Members;
-=======
+
 import { Box, Heading } from "rebass";
 import HomePgBtn from "../components/HomePgBtn"
 
