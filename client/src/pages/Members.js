@@ -37,8 +37,10 @@ function Members(){
           mx: 0,
           boxSizing: "border-box",
         }}>
-      <HomePgBtn name="NEW SYMPTOM"/>
-      <HomePgBtn name="YOUR HISTORY"/>
+      <HomePgBtn name="NEW SYMPTOM"
+      link = "/symptoms" />
+      <HomePgBtn name="YOUR HISTORY"
+      link = "/history" />
 
     </Box>
     </Box>

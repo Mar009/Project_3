@@ -1,9 +1,11 @@
 import React from "react";
 import { Button } from "rebass";
+import { Link } from "react-router-dom";
 
 function HomePgBtn(props) {
     return (
-        <div>
+      <div>
+        <Link to={props.link}>
         <Button
         sx={{
           backgroundColor: "blue",
@@ -13,6 +15,7 @@ function HomePgBtn(props) {
             backgroundColor: 'tomato',
           }
       }}>{props.name}</Button>
+        </Link>
       <br />
       <br />
       </div>
