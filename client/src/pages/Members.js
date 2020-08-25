@@ -33,22 +33,6 @@ export default function Members(){
     
   
 
-  {/* <div className="container">
-  <div className="row">
-    <div className="col-md-6 col-md-offset-3">
-      <h2>Welcome {nickname}</h2>
-    </div>
-  </div>
-</div> */}
-
-
-
-
-
-
-
-
-
       <div>
     <Box
       sx={{
