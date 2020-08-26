@@ -12,12 +12,14 @@ import MembersHome from "./MembersHome";
 import MembersNew from "./MembersNew";
 import MembersRemedy from "./MembersRemedy";
 import MembersHistory from "./MembersHistory";
+
 export default function Members(){
 
     const [state] = useStoreContext();
     const {nickname} = state;
     return (
       <>
+
         <Router>
           <Navbar />
           <Header />
@@ -31,10 +33,17 @@ export default function Members(){
           </Wrapper>
           <Footer />
         </Router>
+
       
+    );
+ 
+
 
     
     </>
   )
+
 }
+  
+
 

@@ -73,6 +73,7 @@ module.exports = function(app) {
       .then(result => res.json(result));
   })
 
+
   app.get("/api/new-symptom", function(req,res){
     if (!req.user) {
       // The user is not logged in, send back an empty object
@@ -96,4 +97,5 @@ module.exports = function(app) {
   })
   
 };
+
 
