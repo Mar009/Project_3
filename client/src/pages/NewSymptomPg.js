@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Box } from "rebass";
 import SymptomQ from "../components/SymptomQ";
-// import useState from "react";
+import API from "../utils/API";
+import Populate from "../components/symptomList";
+import { Multiselect} from "multiselect-react-dropdown";
+
+
 
 function NewSymptomPg() {
     //const [nameOfSymptom, setNameOfSymptom] = useState("");
@@ -9,6 +13,13 @@ function NewSymptomPg() {
     locale: "throat",
     UserId: 2,
     id: 4, time: 3}
+
+    //logic for symptom list
+    const [options, setOptions] = useState([]);
+    useEffect(() => {
+        API.getSymptoms().then(response => setOptions(response.data))
+
+    }, [])
 
     const postData = async (e) => {
         console.log("testing")
@@ -31,15 +42,8 @@ function NewSymptomPg() {
             sx={{
                 m: 70
             }}>
-            <SymptomQ question="Question 1?"
-            postData={postData}
-            //nameOfSymptom={nameOfSymptom}
-            //setNameOfSymptom={setNameOfSymptom} 
-            />
-            {/* <SymptomQ question="Question 2?"/>
-            <SymptomQ question="Question 3?"/>
-            <SymptomQ question="Question 4?"/>
-            <SymptomQ question="Question 5?"/> */}
+            <Populate/>
+
             </Box>
         </div>
     )
