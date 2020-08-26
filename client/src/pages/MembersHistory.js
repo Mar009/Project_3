@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import TablePage from "../components/HistoryPg";
 
 const MembersHistory = () => {
   return ( <>
-  {"qwer"}</>);
+  <TablePage/>
+    </>)
 }
  
 export default MembersHistory;

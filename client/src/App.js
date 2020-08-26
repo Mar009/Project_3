@@ -11,7 +11,8 @@ import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
 
 import NewSymptomPg from "./pages/NewSymptomPg";
-import HistoryPg from "./pages/HistoryPg";
+// import HistoryPg from "./pages/HistoryPg";
+import MembersHistory from './pages/MembersHistory';
 
 
 
@@ -88,7 +89,7 @@ function App() {
                                 </Route>
                                 <Route exact path="/members" component={Members} />
                                 <Route exact path="/symptoms" component={NewSymptomPg} />
-                                <Route exact path="/history" component={HistoryPg} />
+                                <Route exact path="/history" component={MembersHistory} />
 
                             </>
                             )

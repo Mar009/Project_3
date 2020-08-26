@@ -19,18 +19,18 @@ export default function Populate() {
     return (
         <>
             <div class="md-col-3">
-                <h3>Symptom Selection</h3>
+               
                 <div>
-                    {/* {options.map(option => {
-                        return <pre>{JSON.stringify(option.hcText)}
-                            <button key={JSON.stringify(option.hcText)}>add to history</button></pre>
-                    })} */}
+                
                     <Multiselect
                         options={options}
                         selectedValues={options.selectedValue}
                         displayValue="hcText"
+                        id="problemID"
+                        closeIcon="cancel"
+                        closeOnSelect={false}
                  />
-                    <button>Add to Symptom History</button>
+                    
                 </div>
             </div>
         </>
