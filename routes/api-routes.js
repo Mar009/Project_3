@@ -84,6 +84,17 @@ module.exports = function(app) {
       })
     }
   })
+
+  app.get("/api/food-groups", function(req,res){
+    if (!req.user) {
+      // The user is not logged in, send back an empty object
+      res.status(401).json({});
+    } else {
+      axios.get("https://api.nutridigm.com/api/v1/nutridigm/foodgroups?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0").then(response => {
+        res.json(response.data)
+      })
+    }
+  })
   
 };
 

@@ -5,17 +5,18 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        locale: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        doctorType: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
+        // locale: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false
+        // },
+        // doctorType: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true
+        // },
         time: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            default: Date.now
         }
     });
 

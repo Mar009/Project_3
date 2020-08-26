@@ -1,1 +1,0 @@
-//this is where users get navigated from picking their symptom to get possible remedies
