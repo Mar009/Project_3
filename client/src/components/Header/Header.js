@@ -6,9 +6,9 @@ function Header(props) {
     <div className="jumbotron jumbotron-fluid" id="headerWrapper">
       <div className="container">
         {/* Display headings(1-4) to make heading stand out */}
-        <h1 className="display-4 headerFont" id="headerFont">
+        <h className="display-4 headerFont" id="headerFont">
           {props.h1}
-        </h1>
+        </h>
         {/* Make a paragraph stand out by adding .lead */}
         <p className="lead headerFont" id="headerPFont">
           {props.p}
