@@ -14,7 +14,7 @@ import MembersRemedy from "./MembersRemedy";
 
 import MembersHistory from "./MembersHistory";
 
-function Members(){
+
 
 // import MembersHistory from "./MembersHistory";
 export default function Members(){
@@ -47,9 +47,9 @@ export default function Members(){
           </Switch>
         </Wrapper>
         <Footer />
-      </>
+      
     );
-  }
+ 
 
  
     <Box
@@ -89,5 +89,8 @@ export default function Members(){
     
     </>
   )
+
 }
+  
+
 
