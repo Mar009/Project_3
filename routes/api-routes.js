@@ -72,22 +72,5 @@ module.exports = function(app) {
       .then(result => res.json(result));
   })
 }
-  
 
-  //problemID is imported from db tied to user symptom history
-  //fgID is chosen from the list
-
-  //this will allow a user to match a symptom to a remedy type
-  // app.get("/api/get-remedy", function(req,res){
-  //   if (!req.user) {
-  //     // The user is not logged in, send back an empty object
-  //     res.status(401).json({});
-  //   } else {
-  //     axios.get("https://api.nutridigm.com/api/v1/nutridigm/suggest?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0&problemId="+problemID+"&fg2="+fgID).then(response => {
-  //       res.json(response.data)
-  //     })
-  //   }
-  // })
-  
-};
 
