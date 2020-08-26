@@ -1,5 +1,6 @@
 import React from "react"
 import { useStoreContext } from '../utils/GlobalStore';
+
 import Navbar from "../components/Navbar/Navbar";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
@@ -12,6 +13,7 @@ import MembersNew from "./MembersNew";
 import MembersRemedy from "./MembersRemedy";
 // import MembersHistory from "./MembersHistory";
 export default function Members(){
+
     const [state] = useStoreContext();
     const {nickname} = state;
     return (
