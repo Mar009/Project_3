@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
 const MembersHome = () => {
-  return ( <>
-  {"asdf"}</>);
+  return (
+    <>
+    
+    </>
+  );
 }
  
 export default MembersHome;

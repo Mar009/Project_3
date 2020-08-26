@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 const MembersNew = () => {
-  return <>{"1234"}</>;
+  return <>
+  </>;
 };
 
 export default MembersNew;

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
 const MembersRemedy = () => {
-  return <>{"zxcv"}</>;
+  return <>
+  </>;
 };
 
 export default MembersRemedy;
