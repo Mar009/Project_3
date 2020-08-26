@@ -26,10 +26,12 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.0",
     "express-session": "^1.16.1",
+    "multiselect-react-dropdown": "^1.5.7",
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "react-multi-select-component": "^3.0.1",
+    "react-multiple-select-dropdown": "^3.0.0",
     "sequelize": "^5.8.6"
   },
   "devDependencies": {
