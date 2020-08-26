@@ -29,9 +29,9 @@ export default function Members(){
           </Wrapper>
           <Footer />
         </Router>
-      </>
+      
 
- <div>
+ 
     <Box
       sx={{
         p: 4,
@@ -67,7 +67,7 @@ export default function Members(){
     </Box>
     </Box>
     
-  </div>
+    </>
   )
 }
 
