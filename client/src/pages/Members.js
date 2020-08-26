@@ -8,25 +8,35 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MembersHome from "./MembersHome";
 import MembersNew from "./MembersNew";
 import MembersRemedy from "./MembersRemedy";
-// import MembersHistory from "./MembersHistory";
+import MembersHistory from "./MembersHistory";
+
 function Members(){
     const [state] = useStoreContext();
     const {nickname} = state;
     return (
       <>
-        <Router>
-          <Navbar />
-          <Header />
-          <Wrapper>
-            <Switch>
-              <Route exact path="/members" component={MembersHome} />
-              <Route exact path="/members/new" component={MembersNew} />
-              <Route exact path="/members/remedy" component={MembersRemedy} />
-              {/* <Route exact path="/members/history" component={MembersHistory} /> */}
-            </Switch>
-          </Wrapper>
-          <Footer />
-        </Router>
+        <Navbar />
+        <Wrapper>
+          <Switch>
+            <Route exact path="/members">
+              <Header h1="Welcome" />
+              <MembersHome />
+            </Route>
+            <Route exact path="/members/new">
+              <Header h1="Search Symptoms" />
+              <MembersNew />
+            </Route>
+            <Route exact path="/members/remedy">
+              <Header h1="Get Remedy" />
+              <MembersRemedy />
+            </Route>
+            <Route exact path="/members/history">
+              <Header h1="View History" />
+              <MembersHistory />
+            </Route>
+          </Switch>
+        </Wrapper>
+        <Footer />
       </>
     );
   }

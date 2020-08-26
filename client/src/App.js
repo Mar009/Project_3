@@ -9,6 +9,7 @@ import Members from "./pages/Members";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
+import MembersNew from './pages/MembersNew';
 
 
 function App() {
@@ -82,6 +83,9 @@ function App() {
                                     <Redirect to="/members" />
                                 </Route>
                                 <Route exact path="/members" component={Members} />
+                                <Route exact path="/members/new" component={Members} />
+                                <Route exact path="/members/remedy" component={Members} />
+                                <Route exact path="/members/history" component={Members} />
                             </>
                             )
                     }
