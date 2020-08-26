@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const axios = require("axios");
 
 module.exports = function(app) {
   // Route for logging in
@@ -68,6 +69,22 @@ module.exports = function(app) {
         name: req.params.name,
         date: req.params.createdAt
       })
+
       .then(result => res.json(result));
   })
-}
+
+
+  app.get("/api/new-symptom", function(req,res){
+    if (!req.user) {
+      // The user is not logged in, send back an empty object
+      res.status(401).json({});
+    } else {
+      axios.get("https://api.nutridigm.com/api/v1/nutridigm/healthconditions?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0&api_key=200a4593b9277ce9ffb162e74cb71ea0").then(response => {
+        res.json(response.data)
+      })
+    }
+  })
+  
+};
+
+

@@ -1,20 +1,30 @@
 import React from "react"
 import { useStoreContext } from '../utils/GlobalStore';
+
 import Navbar from "../components/Navbar/Navbar";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Wrapper from "../components/Wrapper/Wrapper";
+import { Box, Heading } from "rebass";
+import HomePgBtn from "../components/HomePgBtn"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MembersHome from "./MembersHome";
 import MembersNew from "./MembersNew";
 import MembersRemedy from "./MembersRemedy";
+
 import MembersHistory from "./MembersHistory";
 
 function Members(){
+
+// import MembersHistory from "./MembersHistory";
+export default function Members(){
+
+
     const [state] = useStoreContext();
     const {nickname} = state;
     return (
       <>
+
         <Navbar />
         <Wrapper>
           <Switch>
@@ -41,25 +51,7 @@ function Members(){
     );
   }
 
-  {/* <div className="container">
-  <div className="row">
-    <div className="col-md-6 col-md-offset-3">
-      <h2>Welcome {nickname}</h2>
-    </div>
-  </div>
-</div> */}
-export default Members;
-=======
-import { Box, Heading } from "rebass";
-import HomePgBtn from "../components/HomePgBtn"
-
-
-function Members(){
-    const [state] = useStoreContext();
-    const { nickname } = state;
-
-    return (
-      <div>
+ 
     <Box
       sx={{
         p: 4,
@@ -95,8 +87,7 @@ function Members(){
     </Box>
     </Box>
     
-  </div>
+    </>
   )
 }
 
-export default Members;
