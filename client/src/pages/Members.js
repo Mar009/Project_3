@@ -12,13 +12,14 @@ import MembersHome from "./MembersHome";
 import MembersNew from "./MembersNew";
 import MembersRemedy from "./MembersRemedy";
 
+
 import MembersHistory from "./MembersHistory";
+
 
 
 
 // import MembersHistory from "./MembersHistory";
 export default function Members(){
-
 
     const [state] = useStoreContext();
     const {nickname} = state;
@@ -50,6 +51,7 @@ export default function Members(){
       
     );
  
+
 
  
     <Box
