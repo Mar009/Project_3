@@ -15,6 +15,7 @@ export default {
         return axios.get("/logout");
     },
 
+
     getSymptoms: () => {
         return axios.get("/api/new-symptom");
    },
@@ -25,5 +26,6 @@ export default {
     // getRemedies: () => {
     //     return axios.get("/api/get-remedy?for+");
     // }
+
 
 }

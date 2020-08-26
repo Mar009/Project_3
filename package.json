@@ -20,8 +20,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+
     "axios": "^0.20.0",
+
+    "@rebass/forms": "^4.0.6",
+
     "bcryptjs": "2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.0",
@@ -30,8 +33,11 @@
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "react-multi-select-component": "^3.0.1",
-    "react-multiple-select-dropdown": "^3.0.0",
+
+
+     "if-env": "^1.0.4",
+    "rebass": "^4.0.7",
+
     "sequelize": "^5.8.6"
   },
   "devDependencies": {
@@ -40,7 +46,6 @@
     "concurrently": "^5.3.0",
     "cross-env": "^5.2.0",
     "eslint": "^6.8.0",
-    "if-env": "^1.0.4",
     "mocha": "^5.2.0",
     "nodemon": "^2.0.3"
   }
