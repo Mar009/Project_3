@@ -1,31 +1,27 @@
 module.exports = function (sequelize, DataTypes) {
-    const Symptom = sequelize.define("Symptom", {
+    var Symptom = sequelize.define("Symptom", {
 
-        name: {
+        symptom: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
-        // locale: {
-        //     type: DataTypes.STRING,
+        // UserId: {
+        //     type: DataTypes.INTEGER,
         //     allowNull: false
         // },
-        // doctorType: {
-        //     type: DataTypes.STRING,
-        //     allowNull: true
-        // },
+        problemId: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
         time: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            default: Date.now
+            default: Date.now()
         }
     });
 
     Symptom.associate = function(models) {
-        Symptom.belongsTo(models.User,{
-            foreignKey: {
-                allowNull: false
-            }
-        });
+        Symptom.belongsTo(models.User);
 
     };
 

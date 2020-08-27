@@ -49,9 +49,9 @@ module.exports = function(app) {
 
   app.post("/api/symptom_data", function(req, res) {
     db.Symptom.create({
-      name: req.body.name,
-      locale: req.body.locale,
-      UserId: req.body.UserId,
+      symptom: req.body.symptom,
+      problemId: req.body.problemId,
+      UserId: req.user.id,
       time: req.body.time,
       id: req.body.id
       

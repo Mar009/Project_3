@@ -28,7 +28,7 @@ export default function Populate() {
                         displayValue="hcText"
                         id="problemID"
                         closeIcon="cancel"
-                        closeOnSelect={false}
+                    
                  />
                     
                 </div>

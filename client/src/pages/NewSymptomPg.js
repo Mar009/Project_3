@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Box } from "rebass";
 import SymptomQ from "../components/SymptomQ";
 import API from "../utils/API";
@@ -17,21 +17,21 @@ function NewSymptomPg() {
 
     //logic for symptom list
     // const [options, setOptions] = useState([]);
-    // const [getSelectedItems] = useRef()
-
-    // useEffect(() => {
-    //     API.getSymptoms().then(response => setOptions(response.data))
-
-    // }, [])
+   
 
     const dataToSend =
     {
-        name: "namehere",
-        locale: "throat",
-        UserId: 2,
-        id: 4,
-        time: 3
-    }
+        symptom: "symptom",
+        problemId: "problemID",
+        time: 3,
+    };
+
+    const newSymptoms = useRef(dataToSend);
+
+    useEffect(() => {
+       newSymptoms.current = dataToSend.symptom
+
+    });
 
     const postData = async (e) => {
         console.log("testing")
@@ -43,7 +43,7 @@ function NewSymptomPg() {
             method: 'POST',
             body: JSON.stringify(dataToSend)
         });
-        const json = await response.json()
+        const json = await response.text()
         console.log(json);
     }
     console.log("what is postdata", postData);
@@ -59,7 +59,9 @@ function NewSymptomPg() {
                 <Populate 
                
                 />
-                <button >Add to Symptom History</button>
+                <button
+                onClick={(e) => postData(e)}>Add to Symptom History</button>
+                {/* <button onClick = {(e) => console.log()}>button</button> */}
 
             </Box>
 
