@@ -1,33 +1,37 @@
 @media only screen and (min-width: 415px) {
   #footerfont {
-    position: fixed;
-    margin-left: 45%;
+    /* position: fixed; */
+    /* margin-left: 45%; */
     color: white;
     font-size: 20px;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    /* font-family: Georgia, "Times New Roman", Times, serif; */
+    font-family: 'Raleway', sans-serif;
+
     font-weight: bold;
     text-align: center;
   }
   #navbar {
-    position: fixed;
+    /* position: fixed; */
     bottom: 0%;
-    background-color: #343a40;
+    background-color: #62687F;
   }
 }
 
 @media only screen and (max-width: 414px) {
   #footerfont {
-    position: fixed;
-    margin-left: 38%;
+    /* position: fixed; */
+    /* margin-left: 38%; */
     color: white;
     font-size: 10px;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    /* font-family: Georgia, "Times New Roman", Times, serif; */
+    font-family: 'Raleway', sans-serif;
+
     font-weight: bold;
     text-align: center;
   }
   #navbar {
-    position: fixed;
+    /* position: fixed; */
     bottom: 0%;
-    background-color: #343a40;
+    background-color: #62687F;
   }
 }
