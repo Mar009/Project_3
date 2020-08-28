@@ -49,25 +49,31 @@ function App() {
             })
         })
     }
-
+    
+    const styles = {
+        navbar: {
+            textAlign: "right"
+        } 
+    }
     return (
 
         <Router>
             <div>
+                
                 {/* Componetize this into Nav */}
                 <div>
                         {!state.userLoggedIn ? (
                             // if the user is Logged out
-                            <>
-                                <b>Welcome Guest!</b> &nbsp;&nbsp;&nbsp;
+                            <div>
+                                <b>&nbsp;&nbsp;Welcome Guest!</b> &nbsp;&nbsp;&nbsp;
                                 <Link to="/login">Login</Link> | <Link to="/signup">Signup</Link>
-                            </>
+                            </div>
                         ) : (
                             // If the user is Logged In
-                            <>
-                                <b>Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
-                                <Link to="/members">Members</Link> | <a onClick={() => logout() }href="#">Logout</a>
-                            </>
+                            <div style={styles.navbar}>
+                                <b>&nbsp;&nbsp;Currently logged in as: <em>{state.email}</em></b> &nbsp;&nbsp;&nbsp;
+                                <Link to="/members">Members</Link> | <a onClick={() => logout() }href="#">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
                         )
                         }
                 </div>
@@ -105,7 +111,7 @@ function App() {
 
             </div>
         </Router>
-    );
+    )
 }
 
 export default App;

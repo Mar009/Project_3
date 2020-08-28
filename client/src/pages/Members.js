@@ -34,12 +34,6 @@ export default function Members(){
           <Footer />
         </Router>
 
-      
-    );
- 
-
-
-    
     </>
   )
 

@@ -1,8 +1,12 @@
 .navbar {
-        font-weight: 700;
+        font-weight: 1000;
         font-size: 16px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        font-family: 'Lato', sans-serif;
+        padding-top: 1x;
+        padding-bottom: 1px;
+        /* font-family: 'Open Sans', sans-serif; */
+        font-family: 'Raleway', sans-serif;
 
     }
+#navbarcolor {
+    background-color: #757C95;
+}
