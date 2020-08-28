@@ -61,19 +61,19 @@ function App() {
             <div>
                 
                 {/* Componetize this into Nav */}
-                <div style={styles.navbar}>
+                <div>
                         {!state.userLoggedIn ? (
                             // if the user is Logged out
-                            <>
+                            <div>
                                 <b>&nbsp;&nbsp;Welcome Guest!</b> &nbsp;&nbsp;&nbsp;
                                 <Link to="/login">Login</Link> | <Link to="/signup">Signup</Link>
-                            </>
+                            </div>
                         ) : (
                             // If the user is Logged In
-                            <>
+                            <div style={styles.navbar}>
                                 <b>&nbsp;&nbsp;Currently logged in as: <em>{state.email}</em></b> &nbsp;&nbsp;&nbsp;
                                 <Link to="/members">Members</Link> | <a onClick={() => logout() }href="#">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            </>
+                            </div>
                         )
                         }
                 </div>

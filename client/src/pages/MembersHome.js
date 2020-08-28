@@ -45,7 +45,7 @@ const MembersHome = () => {
         }}>
       <HomePgBtn name="NEW SYMPTOM"
       link = "/symptoms" />
-      <HomePgBtn name="YOUR HISTORY"
+      <HomePgBtn name="VIEW HISTORY&nbsp;&nbsp;&nbsp;"
       link = "/history" />
 
     </Box>
