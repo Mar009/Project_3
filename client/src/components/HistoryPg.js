@@ -32,7 +32,9 @@ class TablePage extends React.Component {
                 <Heading
                 sx={{
                     m: 80,
-                    textAlign: "center"
+                    textAlign: "center",
+                    fontFamily: "'Raleway', sans-serif",
+                    fontSize: 40
                 }}>YOUR HISTORY!</Heading>
                 
                 {yourHistory}

@@ -8,7 +8,7 @@ function Footer() {
         <div id="footerfont">&copy; NatureRx 2020</div>
       </nav>
     </div>
-  );
+  )
 }
 
 export default Footer;

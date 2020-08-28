@@ -72,7 +72,7 @@ function App() {
                             // If the user is Logged In
                             <>
                                 <b>&nbsp;&nbsp;Currently logged in as: <em>{state.email}</em></b> &nbsp;&nbsp;&nbsp;
-                                <Link to="/members">Members</Link> | <a onClick={() => logout() }href="#">Logout</a>&nbsp;&nbsp;
+                                <Link to="/members">Members</Link> | <a onClick={() => logout() }href="#">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;
                             </>
                         )
                         }
@@ -111,7 +111,7 @@ function App() {
 
             </div>
         </Router>
-    );
+    )
 }
 
 export default App;
