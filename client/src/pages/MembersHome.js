@@ -2,16 +2,21 @@ import React, { Component } from 'react';
 import {Box, Heading } from "rebass";
 import HomePgBtn from "../components/HomePgBtn";
 import { useStoreContext } from '../utils/GlobalStore';
-
-
+import Header from "../components/Header/Header";
+import "./mhcss.css";
 
 const MembersHome = () => {
 
   const [state] = useStoreContext();
     const { nickname, email } = state;
-
+    // const greeting = `Welcome, ${nickname}!`;
+    const styles = {
+      fontSize: 25,
+      mt: 20
+    }
     return (
       <div>
+    <Header h1="NATURE RX"/>
     <Box
       sx={{
         p: 4,
@@ -31,10 +36,12 @@ const MembersHome = () => {
         sx={{
           textAlign: "center",
           color: "#233d4d",
-          fontSize: 40,
+          fontSize: 32,
           fontFamily: "'Raleway', sans-serif"
         }}>
         <b>Welcome,&nbsp;{nickname}!</b>
+        <br />
+        {/* <p style={styles} id="spacing"><em>Select from the following to begin.</em></p> */}
       </Heading>
       <Box
         sx={{

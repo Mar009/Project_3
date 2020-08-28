@@ -22,7 +22,7 @@ export default function Members(){
 
         <Router>
           <Navbar />
-          <Header />
+          {/* <Header /> */}
           <Wrapper>
             <Switch>
               <Route exact path="/members" component={MembersHome} />
