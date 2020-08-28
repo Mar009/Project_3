@@ -44,9 +44,9 @@ const MembersHome = () => {
           boxSizing: "border-box",
         }}>
       <HomePgBtn name="NEW SYMPTOM"
-      link = "/symptoms" />
+      link = "/members/new" />
       <HomePgBtn name="VIEW HISTORY&nbsp;&nbsp;&nbsp;"
-      link = "/history" />
+      link = "/members/history" />
 
     </Box>
     </Box>
