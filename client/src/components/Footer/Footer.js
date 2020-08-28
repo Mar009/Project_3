@@ -4,11 +4,11 @@ import "./Footer.css";
 function Footer() {
   return (
     <div>
-      <nav className="navbar fixed-bottom navbar-dark" id="navbar">
+      <nav className="navbar fixed-bottom navbar-dark bg-dark" id="navbar">
         <div id="footerfont">&copy; NatureRx 2020</div>
       </nav>
     </div>
-  )
+  );
 }
 
 export default Footer;

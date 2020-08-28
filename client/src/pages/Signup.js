@@ -40,7 +40,7 @@ function Signup() {
         sx = {{
             p: 4,
             color: 'tomato',
-            bg: '#FFD6BA',
+            bg: '#eee',
             fontFamily: 'body',
             fontWeight: 'body',
             lineHeight: 'body',
