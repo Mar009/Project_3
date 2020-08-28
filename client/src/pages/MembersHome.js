@@ -8,15 +8,16 @@ import { useStoreContext } from '../utils/GlobalStore';
 const MembersHome = () => {
 
   const [state] = useStoreContext();
-    const { nickname, email } = state;
+  const {nickname} = state;
 
-    return (
-      <div>
-    <Box
+  return ( <>
+  
+ 
+  <Box
       sx={{
         p: 4,
         color: 'black',
-        bg: '#FAF9F9',
+        bg: '#eee',
         fontFamily: 'body',
         fontWeight: 'body',
         lineHeight: 'body',
@@ -24,17 +25,13 @@ const MembersHome = () => {
         my: 70,
         height: 400,
         // width: 400,
-        borderRadius: 40,
-        border: "1px solid #555B6E"
+        borderRadius: 40
       }}>
       <Heading
         sx={{
           textAlign: "center",
-          color: "#233d4d",
-          fontSize: 40,
-          fontFamily: "'Raleway', sans-serif"
         }}>
-        <b>Welcome,&nbsp;{nickname}!</b>
+        WELCOME, {nickname}!
       </Heading>
       <Box
         sx={{
@@ -44,15 +41,13 @@ const MembersHome = () => {
           boxSizing: "border-box",
         }}>
       <HomePgBtn name="NEW SYMPTOM"
-      link = "/symptoms" />
-      <HomePgBtn name="VIEW HISTORY&nbsp;&nbsp;&nbsp;"
-      link = "/history" />
+      link = "/members/new" />
+      <HomePgBtn name="YOUR HISTORY"
+      link = "/members/history" />
 
     </Box>
     </Box>
-    
-  </div>
-  )
+  </>);
 }
  
 export default MembersHome;
