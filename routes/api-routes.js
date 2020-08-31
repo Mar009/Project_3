@@ -66,7 +66,8 @@ module.exports = function(app) {
 
   app.get("/api/symptom_data", function(req, res) {
       db.Symptom.findAll({
-        name: req.params.name,
+        symptom: req.params.symptom,
+        problemId: req.params.problemId,
         date: req.params.createdAt
       })
 
