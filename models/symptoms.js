@@ -5,18 +5,14 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: true
         },
-        // UserId: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false
-        // },
         problemId: {
             type: DataTypes.STRING,
             allowNull: true
         },
         time: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
-            default: Date.now()
+            
         }
     });
 

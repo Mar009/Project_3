@@ -1,9 +1,8 @@
 @media only screen and (min-width: 415px) {
 
     #headerWrapper {
-        /* background-color: rgb(215, 212, 196); */
-        background-color: #FAF9F9;
-        height: 130px;
+        background-color: rgb(215, 212, 196);
+        height: 150px;
     }
 
     #headerFont {

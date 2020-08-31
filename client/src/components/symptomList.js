@@ -1,19 +1,14 @@
-import React, { useState, useEffect, useReducer } from "react";
-import API from "../utils/API";
+import React, { useState, useEffect, useRef } from "react";
 import { useStoreContext } from "../utils/GlobalStore";
 import { SET_SYMPTOMS } from "../utils/actions";
 import { Multiselect} from "multiselect-react-dropdown"
 
 
 
-export default function Populate() {
-    const [options, setOptions] = useState([]);
+export default function Populate(props) {
 
+    const { options, selectedSymptoms, handleChange }= props;
 
-    useEffect(() => {
-        API.getSymptoms().then(response => setOptions(response.data))
-
-    }, [])
 
 
     return (
@@ -28,8 +23,13 @@ export default function Populate() {
                         displayValue="hcText"
                         id="problemID"
                         closeIcon="cancel"
-                    
+                        ref={selectedSymptoms}
+                        selectionLimit={1}
+                        onSelect= {handleChange}
+
+              
                  />
+
                     
                 </div>
             </div>

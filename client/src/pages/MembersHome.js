@@ -21,7 +21,7 @@ const MembersHome = () => {
       sx={{
         p: 4,
         color: 'black',
-        bg: '#FAF9F9',
+        bg: '#eee',
         fontFamily: 'body',
         fontWeight: 'body',
         lineHeight: 'body',
@@ -29,8 +29,7 @@ const MembersHome = () => {
         my: 70,
         height: 400,
         // width: 400,
-        borderRadius: 40,
-        border: "1px solid #555B6E"
+        borderRadius: 40
       }}>
       <Heading
         sx={{
@@ -53,13 +52,12 @@ const MembersHome = () => {
       <HomePgBtn name="NEW SYMPTOM"
       link = "/members/new" />
       <HomePgBtn name="VIEW HISTORY&nbsp;&nbsp;&nbsp;"
+
       link = "/members/history" />
 
     </Box>
     </Box>
-    
-  </div>
-  )
+  </>);
 }
  
 export default MembersHome;

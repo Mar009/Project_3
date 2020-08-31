@@ -10,26 +10,20 @@ function Table(props) {
             mt: 10
         }}>
         <Flex flexWrap='wrap' mx={-2} > 
-        <Box width={2/6}
-        sx={{
-            border: "1px solid #ccc"
-        }}> 
+        <Box width={2/6}> 
         <Text fontSize={[ 3, 4, 2 ]} lineHeight={2} p={2} color='#999' bg='#eee'> {props.dateLogged} </Text> 
         </Box> 
-        <Box width={3/6} 
-        sx={{
-            borderTop: "1px solid #ccc",
-            borderRight: "1px solid #ccc",
-            borderBottom: "1px solid #ccc"
-        }}>
+        <Box width={3/6}> 
         <Text fontSize={[ 3, 4, 2 ]} lineHeight={2} p={2} color='#333' bg='#f9f9f9'> {props.symptom} </Text> 
         </Box>
         <Box width={1/6}>
-            <Button sx={{
-            backgroundColor: "blue",
-            ml: 2,
-            p: 15
-        }}>Find Remedy!</Button>
+            <Button 
+            key={props.problemID} 
+            sx={{backgroundColor: "blue"}}
+            onClick = {e=> {console.log(props.problemID)}}
+            >
+            Find Remedy!
+            </Button>
         </Box> 
         </Flex>
         </Box>

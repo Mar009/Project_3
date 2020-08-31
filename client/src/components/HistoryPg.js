@@ -25,7 +25,12 @@ class TablePage extends React.Component {
 
     render() {
         console.log(this.state)
-        const yourHistory = this.state.historyLogs.map(symptom => <Table symptom={symptom.name} dateLogged={symptom.createdAt} />)
+        const yourHistory = this.state.historyLogs.map(symptom => 
+        <Table 
+        symptom={symptom.symptom} 
+        dateLogged={symptom.createdAt} 
+        problemID={symptom.problemId}
+        />)
         
         return (
             <div>
