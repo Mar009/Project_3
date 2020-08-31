@@ -8,8 +8,7 @@
     #headerFont {
         position: relative;
         top: -35px;
-        /* font-family: 'Codystar', cursive; */
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Codystar', cursive;
         font-weight: bold;
         text-align: center;
     }
@@ -17,8 +16,7 @@
     #headerPFont {
         position: relative;
         top: -45px;
-        /* font-family: Georgia, 'Times New Roman', Times, serif; */
-        font-family: 'Raleway', sans-serif;
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
 }
@@ -32,8 +30,7 @@
     #headerFont {
         position: relative;
         top: -10px;
-        /* font-family: 'Codystar', cursive; */
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Codystar', cursive;
         font-weight: bold;
         font-size: 12vw;
         text-align: center;
@@ -43,7 +40,6 @@
         position: relative;
         top: -10px;
         font-size: 3.5vw;
-        /* font-family: Georgia, 'Times New Roman', Times, serif; */
-        font-family: 'Raleway', sans-serif;
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
 }
