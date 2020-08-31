@@ -1,4 +1,4 @@
-# Project_3
+# Nature Rx
 
 # Overview
 An app that helps the user keep track of ailments over time and over natural treatments for said ailments in order to prevent more exposure to SARS-CoV-2
