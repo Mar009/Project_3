@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
 import Remedies from "../components/remedyList";
 import Navbar from "../components/Navbar/Navbar";
+import {Link, useParams} from "react-router-dom";
 
 function MembersRemedy(props) {
+  const {problemID} = useParams();
 
   const selectedRemedy = useRef();
 
@@ -36,10 +38,13 @@ function MembersRemedy(props) {
         onClick={(e) => {
           console.log(selectedRemedy.current.state.selectedValues[0].foodGroupID)
           postData(e)
+          
         }}
       >
         Find Natural Remedy
                 </button>
+
+                
     </>)
   };
 
