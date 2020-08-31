@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import Remedies from "../components/remedyList";
 import Navbar from "../components/Navbar/Navbar";
-import Header from "../components/Header/Header";
-
 
 function MembersRemedy(props) {
 
@@ -50,7 +48,6 @@ function MembersRemedy(props) {
                 </button>
     </>)
   };
-
 
 
   export default MembersRemedy;
