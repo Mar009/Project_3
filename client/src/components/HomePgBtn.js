@@ -8,11 +8,16 @@ function HomePgBtn(props) {
         <Link to={props.link}>
         <Button
         sx={{
-          backgroundColor: "blue",
+          backgroundColor: "#BEE3DB",
+          fontFamily: "'Raleway', sans-serif",
           p: 30,
           px: 100,
+          border: "1px solid whitesmoke",
           ':hover': {
-            backgroundColor: 'tomato',
+            backgroundColor: '#ffd6ba',
+            border: "1px solid #335c67",
+            color: "black",
+            
           }
       }}>{props.name}</Button>
         </Link>

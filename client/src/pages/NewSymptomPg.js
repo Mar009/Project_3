@@ -2,7 +2,12 @@ import React, { useState, useRef, useEffect } from "react";
 import { Box } from "rebass";
 import Populate from "../components/symptomList";
 import API from "../utils/API";
+import { Button, Alert } from 'react-bootstrap';
+import Header from "../components/Header/Header";
+
+
 import {Link} from "react-router-dom";
+
 
 
 
@@ -65,6 +70,7 @@ function NewSymptomPg() {
     return (
         <div>
 
+        <Header h1="NEW SYMPTOM" />
 
             <Box
                 sx={{

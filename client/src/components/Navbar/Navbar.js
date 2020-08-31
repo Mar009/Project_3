@@ -6,7 +6,7 @@ import axios from "axios";
 function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark" id ="navbarcolor">
         <button
           className="navbar-toggler"
           type="button"
@@ -31,7 +31,7 @@ function Navbar() {
                     : "nav-link"
                 }
               >
-                Home
+                Home&nbsp;&nbsp;
               </Link>
             </li>
             <li className="nav-item">
@@ -43,7 +43,7 @@ function Navbar() {
                     : "nav-link"
                 }
               >
-                New
+                New&nbsp;&nbsp;
               </Link>
             </li>
             <li className="nav-item">
@@ -55,7 +55,7 @@ function Navbar() {
                     : "nav-link"
                 }
               >
-                Remedy
+                Remedy&nbsp;&nbsp;
               </Link>
             </li>
             <li className="nav-item">
@@ -67,7 +67,7 @@ function Navbar() {
                     : "nav-link"
                 }
               >
-                History
+                History&nbsp;&nbsp;
               </Link>
             </li>
           </ul>
