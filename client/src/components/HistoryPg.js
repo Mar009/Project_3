@@ -2,6 +2,7 @@ import React from "react";
 import { Heading } from "rebass";
 import Table from "./HistoryLog";
 
+
 class TablePage extends React.Component {
     constructor () {
         super();
@@ -29,7 +30,7 @@ class TablePage extends React.Component {
         <Table 
         symptom={symptom.symptom} 
         dateLogged={symptom.createdAt} 
-        problemID={symptom.problemId}
+        problemId={symptom.problemId}
         />)
         
         return (

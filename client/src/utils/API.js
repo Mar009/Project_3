@@ -23,9 +23,9 @@ export default {
         return axios.get("/api/food-groups");
     },
 
-    // getRemedies: () => {
-    //     return axios.get("/api/get-remedy?for+");
-    // }
+    getRemedies: () => {
+        return axios.get("/api/symptom-remedy");
+    }
 
 
 }

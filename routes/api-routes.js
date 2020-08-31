@@ -66,6 +66,7 @@ module.exports = function(app) {
 
   app.get("/api/symptom_data", function(req, res) {
       db.Symptom.findAll({
+        UserId: req.params.id,
         symptom: req.params.symptom,
         problemId: req.params.problemId,
         date: req.params.createdAt
@@ -102,10 +103,13 @@ module.exports = function(app) {
       // The user is not logged in, send back an empty object
       res.status(401).json({});
     } else {
-      axios.get(`https://api.nutridigm.com/api/v1/nutridigm/suggest?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0&problemId=20&fg2=b1`
+      axios.get(`https://api.nutridigm.com/api/v1/nutridigm/suggest?subscriptionId=200a4593b9277ce9ffb162e74cb71ea0&problemId=27&fg2=k2`
       ).then(response => {
         res.json(response.data)
       })
+      // .catch(function(err) {
+      //   res.status(401).json(err);
+      // });
     }
   })
   

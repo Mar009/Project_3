@@ -1,9 +1,11 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { Flex, Box, Text, Button } from "rebass";
+import { useStoreContext } from '../utils/GlobalStore';
 
 
 function Table(props) {
+    const [, dispatch] = useStoreContext();
 
     return (
         <div>
@@ -21,14 +23,14 @@ function Table(props) {
                     </Box>
                     <Box width={1 / 6}>
                         <Button
-                            key={props.problemID}
+                            key={props.problemId}
                             sx={{ backgroundColor: "blue" }}
                             onClick={e => {
-                                console.log(props.problemID)
+                                console.log(props.problemId)
 
                             }}
                         >
-                            <Link to="/members/remedy">
+                            <Link to="/members/remedy/">
                                 Find Remedy!
                             </Link>
                         </Button>
