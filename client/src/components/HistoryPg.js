@@ -1,6 +1,8 @@
 import React from "react";
 import { Heading } from "rebass";
 import Table from "./HistoryLog";
+import Header from "../components/Header/Header";
+
 
 
 class TablePage extends React.Component {
@@ -35,11 +37,7 @@ class TablePage extends React.Component {
         
         return (
             <div>
-                <Heading
-                sx={{
-                    m: 80,
-                    textAlign: "center"
-                }}>YOUR HISTORY!</Heading>
+                <Header h1="HISTORY" />
                 
                 {yourHistory}
             </div>

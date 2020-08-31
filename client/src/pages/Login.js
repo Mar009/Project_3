@@ -39,7 +39,7 @@ function Login() {
         sx = {{
             p: 4,
             color: 'tomato',
-            bg: '#eee',
+            bg: '#BEE3DB',
             fontFamily: 'body',
             fontWeight: 'body',
             lineHeight: 'body',
