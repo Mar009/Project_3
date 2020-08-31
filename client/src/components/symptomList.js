@@ -8,13 +8,6 @@ import { Multiselect} from "multiselect-react-dropdown"
 export default function Populate(props) {
 
     const { options, selectedSymptoms, handleChange }= props;
-  
-
-    // useEffect(() => {
-    //     selectedSymptoms.current.getSelectedItems();
- 
-    //  });
-       
 
 
 
@@ -37,7 +30,6 @@ export default function Populate(props) {
               
                  />
 
-                     {/* <button onClick = {onSubmit}>button</button> */}
                     
                 </div>
             </div>

@@ -17,9 +17,13 @@ function Table(props) {
         <Text fontSize={[ 3, 4, 2 ]} lineHeight={2} p={2} color='#333' bg='#f9f9f9'> {props.symptom} </Text> 
         </Box>
         <Box width={1/6}>
-            <Button sx={{
-            backgroundColor: "blue"
-        }}>Find Remedy!</Button>
+            <Button 
+            key={props.problemID} 
+            sx={{backgroundColor: "blue"}}
+            onClick = {e=> {console.log(props.problemID)}}
+            >
+            Find Remedy!
+            </Button>
         </Box> 
         </Flex>
         </Box>
