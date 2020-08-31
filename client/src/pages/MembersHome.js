@@ -57,7 +57,7 @@ const MembersHome = () => {
 
     </Box>
     </Box>
-  </>);
+  </div>);
 }
  
 export default MembersHome;

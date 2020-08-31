@@ -29,10 +29,10 @@ function MembersRemedy(props) {
 
   return (<>
 
-//   <Header h1="REMEDIES"/>
-//   <Remedies/>
-//   </>)
-// };
+   {/* <Header h1="REMEDIES"/>
+   <Remedies/>
+   </>)
+ }; */}
 
   <div>
     symptom selection goes here:{props.problemID}
