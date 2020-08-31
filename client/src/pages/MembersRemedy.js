@@ -5,7 +5,11 @@ import Header from "../components/Header/Header";
 import { Box } from "rebass";
 
 
+import {Link, useParams} from "react-router-dom";
+
+
 function MembersRemedy(props) {
+  const {problemID} = useParams();
 
   const selectedRemedy = useRef();
 
@@ -49,11 +53,16 @@ function MembersRemedy(props) {
         onClick={(e) => {
           console.log(selectedRemedy.current.state.selectedValues[0].foodGroupID)
           postData(e)
+          
         }}
       >
         Find Natural Remedy
                 </button>
                 </Box>
+
+
+                
+
     </>)
   };
 

@@ -6,6 +6,9 @@ import { Button, Alert } from 'react-bootstrap';
 import Header from "../components/Header/Header";
 
 
+import {Link} from "react-router-dom";
+
+
 
 
 
@@ -84,20 +87,10 @@ function NewSymptomPg() {
                         postData(e)
                     
                     }}>
+                        <Link to="/members/history">
                     Add to Symptom History
+                    </Link>
                 </button>
-
-                {/* <Alert showMsg={showMsg} variant="success">
-                    <Alert.Heading>Symptom Successfully Added</Alert.Heading>
-              
-                    <div className="d-flex justify-content-end">
-                        <Button onClick={() => setShowMsg(false)} variant="outline-success">
-                            Close me y'all!
-          </Button>
-                    </div>
-                </Alert>
-
-                {!showMsg && <Button onClick={() => setShowMsg(true)}>Show Alert</Button>} */}
 
 
             </Box>
